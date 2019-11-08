@@ -414,6 +414,29 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "ProAgil.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        }
+      },
+      "ProAgil.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ProAgil.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        }
       }
     }
   },
@@ -1078,13 +1101,25 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ProAgil.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Domain/ProAgil.Domain.csproj",
+      "msbuildProject": "../ProAgil.Domain/ProAgil.Domain.csproj"
+    },
+    "ProAgil.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Repository/ProAgil.Repository.csproj",
+      "msbuildProject": "../ProAgil.Repository/ProAgil.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Microsoft.EntityFrameworkCore >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 3.0.0"
+      "Microsoft.EntityFrameworkCore.Sqlite >= 3.0.0",
+      "ProAgil.Domain >= 1.0.0",
+      "ProAgil.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1110,7 +1145,14 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+              "projectPath": "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
+            },
+            "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+              "projectPath": "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

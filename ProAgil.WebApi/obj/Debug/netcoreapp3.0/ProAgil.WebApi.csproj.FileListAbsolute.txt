@@ -84,3 +84,7 @@ E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\obj\Debug\netc
 E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\obj\Debug\netcoreapp3.0\ProAgil.WebApi.csproj.CopyComplete
 E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\obj\Debug\netcoreapp3.0\ProAgil.WebApi.dll
 E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\obj\Debug\netcoreapp3.0\ProAgil.WebApi.pdb
+E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Domain.dll
+E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Domain.pdb
+E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Repository.dll
+E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Repository.pdb
