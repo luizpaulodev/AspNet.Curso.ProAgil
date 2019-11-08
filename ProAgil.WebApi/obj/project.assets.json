@@ -1093,21 +1093,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.WebApi\\ProAgil.WebApi.csproj",
+      "projectUniqueName": "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.WebApi\\ProAgil.WebApi.csproj",
       "projectName": "ProAgil.WebApi",
-      "projectPath": "f:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.WebApi\\ProAgil.WebApi.csproj",
+      "projectPath": "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.WebApi\\ProAgil.WebApi.csproj",
       "packagesPath": "C:\\Users\\LuizPaulo\\.nuget\\packages\\",
-      "outputPath": "f:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.WebApi\\obj\\",
+      "outputPath": "E:\\Cursos\\ASP .NET Core\\Projetos\\Curso.ASP.ProAgil\\ProAgil.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LuizPaulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\LuizPaulo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
