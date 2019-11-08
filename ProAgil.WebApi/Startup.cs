@@ -30,6 +30,9 @@ namespace ProAgil.WebApi
             services.AddDbContext<DataContext>(
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
+
+            services.AddCors();
+
             services.AddControllers();
         }
 
@@ -46,6 +49,10 @@ namespace ProAgil.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(
+                x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()
+            );
 
             app.UseEndpoints(endpoints =>
             {
