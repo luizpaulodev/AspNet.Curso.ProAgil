@@ -30,10 +30,9 @@ namespace ProAgil.WebApi
             services.AddDbContext<ProAgilContext>(
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
-
-            services.AddCors();
-
+            services.AddScoped<IProAgilRepository, ProAgilRepository>();
             services.AddControllers();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
