@@ -88,3 +88,5 @@ E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netc
 E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Domain.pdb
 E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Repository.dll
 E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\ProAgil.Repository.pdb
+E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\AutoMapper.dll
+E:\Cursos\ASP .NET Core\Projetos\Curso.ASP.ProAgil\ProAgil.WebApi\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

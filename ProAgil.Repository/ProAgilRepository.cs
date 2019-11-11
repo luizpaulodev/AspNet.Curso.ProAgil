@@ -49,7 +49,7 @@ namespace ProAgil.Repository
             }
 
             query = query.AsNoTracking()
-                .OrderByDescending(x => x.DataEvento);
+                .OrderBy(x => x.Id);
 
             return await query.ToArrayAsync();
         }
@@ -71,7 +71,6 @@ namespace ProAgil.Repository
 
             return await query.ToArrayAsync();
         }
-
         public async Task<Evento> GetEventoAsyncById(int EventoId, bool includePalestrantes)
         {
             IQueryable<Evento> query = context.Eventos
