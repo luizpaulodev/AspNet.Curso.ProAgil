@@ -22,9 +22,9 @@ namespace ProAgil.WebApi.Dtos
         [Phone]
         public string Telefone { get; set; }
         
-        [EmailAddress]
+        [Required(ErrorMessage = "O {0} deve ser preenchido!")]
+        [EmailAddress(ErrorMessage = "E-mail em formato inválido!")]
         public string Email { get; set; }
-        // public string Lote { get; set; }
         public List<LoteDto> Lotes { get; set; }
         public List<RedeSocialDto> RedesSociais { get; set; }
         public List<PalestranteDto> Palestrantes { get; set; }
