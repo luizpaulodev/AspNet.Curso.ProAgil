@@ -87,7 +87,7 @@ export class EventosComponent implements OnInit {
     });
   }
 
-  novoEvento(evento: Evento, template: any) {
+  novoEvento(template: any) {
     this.modoSalvar = 'post';
     this.openModal(template);
   }
