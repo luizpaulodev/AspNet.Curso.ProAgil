@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
@@ -68,8 +69,6 @@ namespace ProAgil.WebApi.Controllers
             {
                 return BadRequest("Falha ao tentar realizar o upload!");
             }
-
-            // return BadRequest("Falha ao tentar realizar o upload!");
         }
 
         [HttpGet("{EventoId}")]

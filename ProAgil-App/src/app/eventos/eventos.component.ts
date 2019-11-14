@@ -53,7 +53,8 @@ export class EventosComponent implements OnInit {
         this.eventosFiltrados = evento;
       },
       error => {
-        this.toastr.error(`Erro ao tentar carregar eventos!: ${error}`);
+        this.toastr.error(`Erro ao tentar carregar eventos!`);
+        console.log(error);
       }
     );
   }
