@@ -36,9 +36,13 @@ export class EventosComponent implements OnInit {
   _filtroLista = '';
   dataAtual: string;
 
-  constructor(private eventoService: EventoService, private modalService: BsModalService,
-              private fb: FormBuilder, private serviceLocale: BsLocaleService,
-              private toastr: ToastrService) {
+  constructor(
+    private eventoService: EventoService,
+    private modalService: BsModalService,
+    private fb: FormBuilder,
+    private serviceLocale: BsLocaleService,
+    private toastr: ToastrService) {
+
   }
 
   ngOnInit() {
@@ -47,6 +51,7 @@ export class EventosComponent implements OnInit {
   }
 
   getEventos() {
+    this.dataAtual = new Date().getMilliseconds().toString();
     this.eventoService.getAllEventos().subscribe(
       (evento: Evento[]) => {
         this.eventos = evento;

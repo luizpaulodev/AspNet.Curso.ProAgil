@@ -117,9 +117,9 @@ namespace ProAgil.WebApi.Controllers
                     return Created($"/v1/evento/{model.Id}", _mapper.Map<Evento>(model));
                 }
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de Dados Falhou");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Post Banco de Dados Falhou: " + ex.Message);
             }
 
             return BadRequest("error");
@@ -130,13 +130,31 @@ namespace ProAgil.WebApi.Controllers
         {
             try
             {
-                var evento = await _repo.GetEventoAsyncById(EventoId, false);
+                var idLotes = new List<int>();
+                var idRedesSociais = new List<int>();
 
+                model.Lotes.ForEach(x => idLotes.Add(x.Id));
+                model.RedesSociais.ForEach(x => idRedesSociais.Add(x.Id));
+
+                var evento = await _repo.GetEventoAsyncById(EventoId, false);
                 if (evento == null)
                     return NotFound();
 
-                _mapper.Map(model, evento);
+                var lotes = evento.Lotes.Where(
+                    lote => !idLotes.Contains(lote.Id)
+                ).ToArray<Lote>();  
 
+                var redesSociais = evento.RedesSociais.Where(
+                    redeSocial => !idRedesSociais.Contains(redeSocial.Id)
+                ).ToArray<RedeSocial>();    
+
+                if (lotes.Length > 0)
+                    _repo.DeleteRange(lotes);
+
+                if (redesSociais.Length > 0) 
+                    _repo.DeleteRange(redesSociais);                    
+
+                _mapper.Map(model, evento);
                 _repo.Update(evento);
 
                 if (await _repo.SaveChangeAsync())
@@ -144,9 +162,9 @@ namespace ProAgil.WebApi.Controllers
                     return Created($"/v1/evento/{model.Id}", _mapper.Map<Evento>(model));
                 }
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de Dados Falhou");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de Dados Falhou: " + ex.Message);
             }
 
             return BadRequest();

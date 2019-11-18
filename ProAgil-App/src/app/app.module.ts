@@ -6,7 +6,11 @@ import { BsDropdownModule, TooltipModule, ModalModule, BsDatepickerModule } from
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ToastrModule } from 'ngx-toastr';
+import { TabsModule } from 'ngx-bootstrap';
+import { NgxMaskModule } from 'ngx-mask';
+import { NgxCurrencyModule } from 'ngx-currency';
 
 import { EventoService } from './_services/evento.service';
 
@@ -24,6 +28,7 @@ import { TituloComponent } from './_shared/titulo/titulo.component';
 
 import { DateTimeFormatPipePipe } from './_helps/DateTimeFormatPipe.pipe';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { EventoEditComponent } from './eventos/eventoEdit/eventoEdit.component';
 
 
 @NgModule({
@@ -32,6 +37,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
       NavComponent,
       TituloComponent,
       EventosComponent,
+      EventoEditComponent,
       PalestrantesComponent,
       DashboardComponent,
       ContatosComponent,
@@ -51,10 +57,13 @@ import { AuthInterceptor } from './auth/auth.interceptor';
       ModalModule.forRoot(),
       BrowserAnimationsModule,
       ToastrModule.forRoot({
-         timeOut: 6000,
+         timeOut: 5000,
          positionClass: 'toast-bottom-right',
          preventDuplicates: true
       }),
+      TabsModule.forRoot(),
+      NgxMaskModule.forRoot(),
+      NgxCurrencyModule,
       ReactiveFormsModule,
       BrowserAnimationsModule
    ],

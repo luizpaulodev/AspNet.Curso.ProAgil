@@ -30,6 +30,11 @@ namespace ProAgil.Repository
             context.Remove(entity);
         }
 
+        public void DeleteRange<T>(T[] entityArray) where T : class
+        {
+            context.RemoveRange(entityArray);
+        }
+
         public async Task<bool> SaveChangeAsync()
         {
            return await context.SaveChangesAsync() > 0;
